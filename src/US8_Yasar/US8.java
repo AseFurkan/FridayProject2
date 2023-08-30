@@ -1,5 +1,13 @@
 package US8_Yasar;
 
-public class US8 {
+import Utility.BaseDriver;
+import org.junit.Test;
 
+public class US8 extends BaseDriver {
+
+    @Test
+    public void test(){
+        driver.get();
+
+    }
 }
