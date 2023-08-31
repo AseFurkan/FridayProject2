@@ -7,7 +7,7 @@ public class US8 extends BaseDriver {
 
     @Test
     public void test(){
-        driver.get();
+
 
     }
 }
