@@ -16,8 +16,25 @@ public class US6 extends BaseDriver {
 @Test
     public void Test1() {
 
-    Login();
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='button-2 product-box-add-to-cart-button'])[3]")));
+    driver.get("https://demowebshop.tricentis.com/");
+    MyFunction.Wait(2);
+
+    WebElement loginbutton=driver.findElement(By.cssSelector("[class='ico-login']"));
+    loginbutton.click();
+    MyFunction.Wait(2);
+
+    WebElement emailkutusu=driver.findElement(By.cssSelector("[class='email']"));
+    emailkutusu.sendKeys("alper2344@gmail.com");
+    MyFunction.Wait(2);
+
+    WebElement sifrekutusu=driver.findElement(By.cssSelector("[class='password']"));
+    sifrekutusu.sendKeys("Alper2344");
+    MyFunction.Wait(2);
+
+    WebElement loginbutton2=driver.findElement(By.cssSelector(" [class='button-1 login-button']"));
+    loginbutton2.click();
+
+    MyFunction.Wait(5);
 
     MyFunction.Wait(2);
     WebElement text1=driver.findElement(By.xpath("(//*[@href='/build-your-cheap-own-computer'])[4]"));
@@ -26,7 +43,7 @@ public class US6 extends BaseDriver {
     WebElement urunEkleme=driver.findElement(By.xpath("(//*[@class='button-2 product-box-add-to-cart-button'])[3]"));
     urunEkleme.click();
 
-    wait.until(ExpectedConditions.urlToBe("https://demowebshop.tricentis.com/build-your-cheap-own-computer"));
+    MyFunction.Wait(5);
 
     WebElement SepeteTikla=driver.findElement(By.xpath("(//*[@class='cart-label'])[1]"));
    SepeteTikla.click();
