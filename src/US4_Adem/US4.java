@@ -37,7 +37,7 @@ public class US4{
         MyFunction.Wait(2);
 
 
-        BekleVeKapat();
+        //BekleVeKapat();
 
     }
 }
